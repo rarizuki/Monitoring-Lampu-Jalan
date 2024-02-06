@@ -1,0 +1,145 @@
+ body
+{
+	padding:0;
+	margin:0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	min-height: 100vh;
+	font-family:consolas;
+}
+.contain
+{
+	position: relative;
+	width: 450px;
+	min-height: 300px;
+	background:rgba(255, 255, 255,0.05);
+	box-shadow: 0 5px 15px rgba(0,0,0,1);
+}
+.contain:before
+{
+	content:'';
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 50%;
+	height: 100%;
+	background:rgba(255, 255, 255,0.1);
+	pointer-events: none;
+}
+.contain:after
+{
+	content:'';
+	position: absolute;
+	top: -5px;
+	left: -5px;
+	right: -5px;
+	bottom: -5px;
+	background: linear-gradient(45deg, #ff0047, #6eff00);
+	pointer-events: none;
+	animation: animate 10s linear infinite;
+}
+@keyframes animate
+{
+	0%
+	{
+		filter: blur(60px) hue-rotate(0deg);
+	}
+	100%
+	{
+		filter: blur(60px) hue-rotate(360deg);
+	}
+}
+.form
+{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	padding:40px;
+	box-sizing: border-box;
+	z-index: 1;
+}
+.form h2
+{
+	margin: 0;
+	padding: 0;
+	color:#fff;
+	font-size: 24px;
+}
+.form .inputBox
+{
+	width: 100%;
+	margin-top: 20px;
+}
+.form .inputBox input
+{
+	width: 100%;
+	background: transparent;
+	border:none;
+	border-bottom: 2px solid #fff;
+	outline: none;
+	font-size: 18px;
+	color: #fff;
+	padding: 5px 0;
+	font-family: consolas;
+}
+::placeholder
+{
+	color:#eee;
+}
+.form .inputBox button[type="submit"]
+{
+	background: none;
+	color: #00d600;
+	border: 2px solid #00d600;
+	border-radius: 10%;
+	font-weight: 900;
+	max-width: 100px;
+	cursor: pointer;
+	transition: 0.3s
+}
+.form .inputBox button[type="submit"]:hover
+{
+	color:#292b2c;
+	background:#00d600;
+	box-shadow: 0 0 10px #00d600, 0 0 40px #00d600, 0 0 80px #00d600;
+}
+.form .inputBox a[type="submit"]
+{
+	background: none;
+	color: #cbf50f;
+	border: 2px solid #cbf50f;
+	border-radius: 10%;
+	font-weight: 900;
+	max-width: 100px;
+	cursor: pointer;
+	transition: 0.3s;
+	margin-left: 35px;
+}
+.form .inputBox a[type="submit"]:hover
+{
+	color:#292b2c;
+	background:#cbf50f;
+	box-shadow: 0 0 10px #cbf50f, 0 0 40px #cbf50f, 0 0 80px #cbf50f;
+}
+
+.baris
+{
+	margin-bottom: 7px;
+}
+
+h3.header-page
+{
+	background:#00d600;
+	color:#292b2c;
+	border: 2px solid #00d600;
+	border-radius: 10%;
+	font-weight: 900;
+	max-width: 100px;
+	cursor: pointer;
+	transition: 0.3s;
+	box-shadow: 0 0 10px #00d600, 0 0 40px #00d600, 0 0 80px #00d600;
+}
+
+

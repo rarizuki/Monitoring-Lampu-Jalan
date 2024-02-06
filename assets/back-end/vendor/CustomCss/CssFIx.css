@@ -1,0 +1,166 @@
+html
+{
+	width: 100%;
+	min-height: 100%;
+}
+
+button
+{	
+	position: relative;
+	display: inline-block;
+	padding: 15px 30px;
+	color: #ffffff;
+	text-transform: uppercase;
+	letter-spacing: 4px;
+	text-decoration: none;
+	font-size: 24px;
+	overflow:  hidden;
+	transition: 0.2s;
+	background-color: transparent;	
+	border-color: transparent;
+
+}
+
+.bg
+{
+	background-color: #343a40;
+	
+}
+
+.textcenter
+{
+	text-align: center;
+	font-family: Arial;
+	font-style: bold;
+
+}
+
+.login-panel-color
+{
+	opacity: 100%
+}
+
+
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+
+.tabel-gelap
+{
+	color: #fff !important;
+	background-color: #4a4a4a !important;
+}
+
+.nav-option
+{
+	margin-top: 20% !important;
+}
+h3.header-page
+{
+	color: #fff !important;
+	font-weight: 900;
+	cursor: pointer;
+	transition: 0.3s;
+	margin-top: 10%;
+	
+}
+a.tombol-neon
+{
+	background: none;
+	color: #0df3ff;
+	border: 2px solid #0df3ff;
+	border-radius: 10%;
+	font-weight: 900;
+	max-width: 100px;
+	cursor: pointer;
+	transition: 0.3s;
+	text-decoration:none;
+}
+.tombol-neon:hover{
+	color:#000;
+	background:#0df3ff;
+	box-shadow: 0 0 10px #0df3ff, 0 0 40px #0df3ff, 0 0 80px #0df3ff;
+}
+.panel-heading
+{
+	background-color: #616161 !important;
+}
+
+.tombol-neon-hijau
+{
+	background: none;
+	color:#07c900;
+	border: 2px solid #07c900;
+	border-radius: 10%;
+	font-weight: 900;
+	max-width: 100px;
+	cursor: pointer;
+	transition: 0.3s;
+	text-decoration:none;
+}
+.tombol-neon-hijau:hover
+{
+	color:#fff;
+	background:#07c900;
+	box-shadow: 0 0 10px #07c900, 0 0 40px #07c900, 0 0 80px #07c900;
+}
+
+.tombol-neon-merah{
+	background: none;
+	color: #fc1717;
+	border: 2px solid #fc1717;
+	border-radius: 10%;
+	font-weight: 900;
+	max-width: 100px;
+	cursor: pointer;
+	transition: 0.3s;
+	text-decoration:none;
+}
+.tombol-neon-merah:hover
+{
+	color:#fff;
+	background:#fc1717;
+	box-shadow: 0 0 10px #fc1717, 0 0 40px #fc1717, 0 0 80px #fc1717;
+}
+.main-content
+{
+	margin-left: 100px;
+}
+
