@@ -238,32 +238,35 @@ class Lokasi extends CI_Controller {
 									'isi'	 		=>	'admin/lokasi/v_edit'
 								);
 		$this->load->view('admin/layout/v_wrapper', $data);
-        	$file_lama = $this->input->post('foto_lama');
+		$file_lama = $this->input->post('foto_lama');
 		$file_baru = $_FILES["foto_baru"]['name'];
-		if($file_baru == TRUE){
-			$update_filebaru = $_FILES["foto_baru"]['name'];
-			$config = [
-				'upload_path' => "./assets/gambar_lokasi",
-				'allowed_types' => "gif|jpg|png|jpeg",
-				'file_name' => $update_filebaru,
-			];
-			$this->load->library('upload',$config);
-			if($this->upload->do_upload('gambar_lokasi')){
-				if(file_exists(".assets/gambar_lokasi".$file_lama)){
-					unlink(".assets/gambar_lokasi".$file_baru);
-				}
-			}
-		}
-		else{
-			$update_filebaru = $file_lama;
-		}
-		$data = [
-			'id_lokasi'			=>$id,
-			'nama_lokasi'			=> $this->input->post('nama_lokasi'),
-		    	'latitude'			=> $this->input->post('latitude'),
-		  	'longitude'			=> $this->input->post('longitude'),
-			'gambar_lokasi'			=> $update_filebaru        		
+		$update_filebaru = '';
+if(!empty($file_baru)){
+    $config['upload_path']   = './assets/gambar_lokasi/';
+    $config['allowed_types'] = 'gif|jpg|png|jpeg';
+    $config['file_name'] = $file_baru;
+    $this->upload->initialize($config);
+    if($this->upload->do_upload('foto_baru')){
+        // Hapus foto lama jika ada
+        if(!empty($file_lama) && file_exists("./assets/gambar_lokasi/".$file_lama)){
+            unlink("./assets/gambar_lokasi/".$file_lama);
+        }
+        $update_filebaru = $file_baru; // Simpan nama file baru
+    }
+    else{
+        echo $this->upload->display_errors(); // Tampilkan pesan error jika upload gagal
+    }
+}
+else{
+    $update_filebaru = $file_lama;
+}
 
+		$data = [
+			'id_lokasi'      => $id,
+			'nama_lokasi'    => $this->input->post('nama_lokasi'),
+			'latitude'       => $this->input->post('latitude'),
+			'longitude'      => $this->input->post('longitude'),
+			'gambar_lokasi'  => $update_filebaru         
 		];
             
             

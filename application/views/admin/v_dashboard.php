@@ -1,11 +1,6 @@
 <div id="content" class="main-content">
             <div class="container">
-
                 <div class="container">
-
-                    
-                        
-                
                     <div class="row layout-top-spacing">
                         
                         <div id="counterBasic" class="col-lg-12 layout-spacing">
@@ -41,12 +36,8 @@
                                             </div>
                                             <p class="s-counter-text">LAMPU 3</p>
                                         </div>
-                              
-
                                     </div>
-                                    
                                     </div>
-                                    
                                     </div>
         
     

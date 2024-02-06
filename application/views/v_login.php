@@ -14,7 +14,6 @@
     <!--CustomCSS -->
     <link href="<?php echo base_url(); ?>assets/back-end/vendor/CustomCss/CssFix.css" rel="stylesheet" type="text/css">
     <link href="<?php echo base_url(); ?>assets/back-end/vendor/CustomCss/loginForm.css" rel="stylesheet" type="text/css">
-    <link href="<?php echo base_url(); ?>assets/back-end/js/sweetalert2.css" rel="stylesheet" type="text/css">
 
 
     <!-- Bootstrap Core CSS -->
@@ -108,7 +107,6 @@
 
             <!-- Custom Theme JavaScript -->
             <script src="<?php echo base_url(); ?>assets/back-end/dist/js/sb-admin-2.js"></script>
-            <script src="<?php echo base_url(); ?>assets/back-end/dist/js/sweetalert2.js"></script>
 
 </body>
 
